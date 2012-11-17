@@ -34,7 +34,7 @@ public class Application extends Controller {
     {
     	new Event(inputTitle, inputCategory, inputDescription, inputDate, inputStartTime, inputDuration).save();
     	
-		System.out.println("Called");	
+		System.out.println("Called " + inputTitle);	
     	render("@Application.index");
     }
     
