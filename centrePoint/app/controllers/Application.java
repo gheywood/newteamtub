@@ -41,7 +41,7 @@ public class Application extends Controller {
     public static void filterEvents(String category, String location)
     {
         List<Event> events = Event.find("select e from Event e, Venue v where e.venue = v and v.location = ? and e.category = ?", location, category).fetch();
-        render(events);
+        render("@Application.displayEvents", events);
     }
     
     public static void getEvent(String title)
@@ -50,12 +50,15 @@ public class Application extends Controller {
         render(e);        
     }
     
-    public static void getCategories()
+    public static List<String> getCategories()
     {
-        List<String> categs = Event.find("select category from Event").fetch();
-        render(categs);
-    	//String e = title;
-        //Event e = Event.find("byTitle", title).first();
-        render();
+        List<String> categs = Event.find("category").fetch();
+        return(categs);
+    }
+    
+    public static List<String> getLocations()
+    {
+        List<String> locations = Venue.find("location").fetch();
+        return(locations);
     }
 }
