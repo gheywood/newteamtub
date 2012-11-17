@@ -18,7 +18,11 @@ public class Application extends Controller {
     //	new Event(inputTitle, inputCategory, inputDescription, inputStartTime).save();
     //	render();
     //}
-
+    
+	public static void eventForm()
+	{
+		render();
+	}
     
     public static void addEvent(
     	String inputTitle,
@@ -26,7 +30,9 @@ public class Application extends Controller {
     	String inputDescription,
     	String inputStartTime)
     {
-    	new Event(inputTitle, inputCategory, inputDescription, inputStartTime).save();	
+    	new Event(inputTitle, inputCategory, inputDescription, inputStartTime).save();
+    	
+		System.out.println("Called");	
     	render("@Application.index");
     }
     
