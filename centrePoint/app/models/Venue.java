@@ -10,7 +10,7 @@ public class Venue extends Model {
  
     public String name;
     public String location;
-    public boolean isPreSet
+    public boolean isPreSet;
     
     @OneToMany(mappedBy="venue")
     public List<Event> events;
@@ -30,7 +30,7 @@ public class Venue extends Model {
     {
     	if(isPreSet)
         {
-            Event newEvent = new Event(title, category, description, startTime);
+            Event newEvent = new Event(title, category, description, startTime ,"");
             this.events.add(newEvent);
             this.save();
         };

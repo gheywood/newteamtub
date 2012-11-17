@@ -54,5 +54,8 @@ public class Application extends Controller {
     {
         ArrayList<String> categs = Event.find("select category from Event").fetch();
         render(categs);
+    	//String e = title;
+        //Event e = Event.find("byTitle", title).first();
+        render();
     }
 }
