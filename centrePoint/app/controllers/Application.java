@@ -10,7 +10,9 @@ import models.*;
 public class Application extends Controller {
 
     public static void index() {
-        render();
+    	
+    	List<String> cats = getCategories();
+        render(cats);
     }
     
     //public static void addEvent()
@@ -58,13 +60,13 @@ public class Application extends Controller {
     
     public static List<String> getCategories()
     {
-        List<String> categs = Event.find("category").fetch();
+        List<String> categs = Event.find("select category from Event").fetch();
         return(categs);
     }
     
     public static List<String> getLocations()
     {
-        List<String> locations = Venue.find("location").fetch();
+        List<String> locations = Venue.find("select location from Venue").fetch();
         return(locations);
     }
 }
