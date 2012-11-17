@@ -15,7 +15,7 @@ public class Application extends Controller {
     
     public static void addEvent()
     {
-    	//new Event(inputTitle, inputCategory, inputDescription, inputStartTime).save();
+    	new Event(inputTitle, inputCategory, inputDescription, inputStartTime).save();
     	render();    
     }
 
@@ -26,14 +26,14 @@ public class Application extends Controller {
     	String inputDescription,
     	String inputStartTime)
     {
-    	//new Event(inputTitle, inputCategory, inputDescription, inputStartTime).save();	
+    	new Event(inputTitle, inputCategory, inputDescription, inputStartTime).save();	
     	render("@Application.index");
     }
     
     public static void getEvent(String name)
     {
-        //Event e = Event.find("byName", name).fetch();
-        //render(e.name);
+        Event e = Event.find("byName", name).fetch();
+        render(e.name);
         
     }
 }
