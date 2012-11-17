@@ -38,6 +38,11 @@ public class Application extends Controller {
     	render("@Application.index");
     }
     
+    public static void displayEvents()
+    {
+    	render(Event.findAll());
+    }
+    
     public static void filterEvents(String category, String location)
     {
         List<Event> events = Event.find("select e from Event e, Venue v where e.venue = v and v.location = ? and e.category = ?", location, category).fetch();
