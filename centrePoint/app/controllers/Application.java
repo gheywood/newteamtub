@@ -13,14 +13,14 @@ public class Application extends Controller {
         render();
     }
     
-    public static void addEvent()
-    {
-    	new Event(inputTitle, inputCategory, inputDescription, inputStartTime).save();
-    	render();    
-    }
+    //public static void addEvent()
+    //{
+    //	new Event(inputTitle, inputCategory, inputDescription, inputStartTime).save();
+    //	render();
+    //}
 
     
-    public static void postEvent(
+    public static void addEvent(
     	String inputTitle,
     	String inputCategory,
     	String inputDescription,
@@ -30,10 +30,10 @@ public class Application extends Controller {
     	render("@Application.index");
     }
     
-    public static void getEvent(String name)
+    public static void getEvent(String title)
     {
-        Event e = Event.find("byName", name).fetch();
-        render(e.name);
+        Event e = Event.find("byTitle", title).first();
+        render(e.title);
         
     }
 }
