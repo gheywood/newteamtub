@@ -25,6 +25,16 @@ public class Application extends Controller {
 	{
 		render();
 	}
+	
+	public static void addVenue(
+    	String inputName,
+    	String inputLocation)
+    {
+    	new Event(inputName, inputLocation).save();
+    	
+		System.out.println("Venue: " + inputName);	
+    	render("@Application.index");
+    }
     
     public static void addEvent(
     	String inputTitle,
@@ -36,7 +46,7 @@ public class Application extends Controller {
     {
     	new Event(inputTitle, inputCategory, inputDescription, inputDate, inputStartTime, inputDuration).save();
     	
-		System.out.println("Called " + inputTitle);	
+		System.out.println("Event: " + inputTitle);	
     	render("@Application.index");
     }
     
