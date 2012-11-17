@@ -7,7 +7,7 @@
     #{field 'inputTitle'}
     <label class="control-label" for="inputTitle">Event Title</label>
     <div class="controls">
-      <input type="text" id="inputEventTitle" placeholder="Title">
+      <input type="text" name="${field.name}" placeholder="Title">
     </div>
     #{/field}
   </div>
@@ -15,7 +15,7 @@
     #{field 'inputDescription'}
     <label class="control-label" for="inputDescripton">Description</label>
     <div class="controls">
-      <textarea rows="3" type="description" id="inputDescription" placeholder="Description"></textarea>
+      <textarea rows="3" type="description" name="${field.name}" placeholder="Description"></textarea>
     </div>
     #{/field}
   </div>
@@ -29,7 +29,7 @@
     #{field 'inputStartTime'}
     <label class="control-label" for="inputStartTime">Start Time</label>
     <div class="controls">
-      <input type="text" id="inputStartTime" placeholder="StartTime">
+      <input type="text" name="${field.name}" placeholder="StartTime">
     </div>
     #{/field}
   </div>
