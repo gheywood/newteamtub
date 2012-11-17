@@ -10,7 +10,9 @@ import models.*;
 public class Application extends Controller {
 
     public static void index() {
-        render();
+    	
+    	List<String> cats = getCategories();
+        render(cats);
     }
     
     //public static void addEvent()

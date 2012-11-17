@@ -1,5 +1,5 @@
 #{extends 'main.html' /}
-#{set title:'Add Event' /}
+#{set title:'Index' /}
 
 <div>
 
@@ -9,12 +9,17 @@
 
 </div>
 <div class="btn-group span2" align="center">
-  <a class="btn btn-large btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
-    Category
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu">
-    <!-- dropdown menu links -->
+ 
+  #{field 'inputCategory'}
+    <label class="control-label">Category</label>
+    <div class="btn btn-large btn-primary dropdown-toggle">
+      <select name="${field.name}">
+      <option>${cats.get(0)}	</option>
+   </select>
+    </div>
+    #{/field}
+  
+  
   </ul>
 
 
