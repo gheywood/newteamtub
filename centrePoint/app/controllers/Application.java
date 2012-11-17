@@ -32,7 +32,7 @@ public class Application extends Controller {
     {
     	new Event(inputTitle, inputCategory, inputDescription, inputStartTime).save();
     	
-		System.out.println("Called");	
+		System.out.println("Called " + inputTitle);	
     	render("@Application.index");
     }
     
