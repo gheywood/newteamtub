@@ -40,7 +40,7 @@ public class Application extends Controller {
     
     public static void filterEvents(String category, String location)
     {
-        ArrayList<Event> events = Event.find("select e from Event e, Venue v where e.venue = v and v.location = ? and e.category = ?", location, category).fetch();
+        ArrayList<Event> events = Event.find("select e from Event e, Venue v where e.venue = v and v.location = ? and e.category = ?", location, category);
         render(events);
     }
     
