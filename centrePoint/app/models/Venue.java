@@ -10,7 +10,7 @@ public class Venue extends Model {
  
     public String name;
     public String location;
-    public boolean isPreSet
+    public boolean isPreSet;
     
     @OneToMany(mappedBy="venue")
     public List<Event> events;

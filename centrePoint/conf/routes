@@ -6,6 +6,7 @@
 GET     /                                       Application.index
 GET		/addEvent								Application.eventForm
 POST	/addEvent								Application.addEvent
+GET		/getEvent/{title}						Application.getEvent
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
