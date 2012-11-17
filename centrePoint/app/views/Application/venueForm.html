@@ -1,0 +1,30 @@
+#{extends 'main.html' /}
+    <div>
+        <h1>Add an Event</h1>
+    </div>
+#{form @addVenue()}
+ <style>
+  label { padding: 0; marign: 0; display: block; }
+  textarea { width: 100%; border: 1px solid #333; padding: 4px; }
+  .the-fix { padding-right: 10px; }
+ </style>
+
+
+<div class="row">
+
+<div class="control-group span3">
+    #{field 'inputName'}
+    <label>Venue Name: </label>
+      <input type="text" name="${field.name}" placeholder="Name">
+    #{/field}
+</div>
+
+<div class="control-group span3">
+    #{field 'inputLocation'}
+    <label>Venue Location: </label>
+      <input type="text" name="${field.name}" placeholder="Location">
+    #{/field}
+</div>
+
+</div>
+#{/form}
