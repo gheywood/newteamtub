@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Main</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="public/stylesheets/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="public/stylesheets/main.css" type="text/css">
+    <link rel="javascript" href="public/javascripts/bootstrap.min.js" type= "text/js">
+
+    <script type=text/javascript>
+      $('#popover').popover()
+      $('#tooltip').tooltip()
+    </script>
+
+  </head>
+
+  <body>
+
+
+
+    
+      
+      <div class="masthead">
+
+        <ul class="nav nav-pills pull-right">
+
+          <li class="active"><a href="#">Home</a></li>
+
+          <li><a href="#" rel="popover" data-placement="bottom" data-content="More information" data-trigger="hover" data-original-title="About">About</a></li>
+
+          <li><a href="#">Contact</a></li>
+
+          <li><a href="#">Admin</a></li>
+
+        </ul>
+
+      </div>
+
+
+      <div>
+        <h3 class="muted">CentrePoint Event</h3>
+      </div>
+
+      <div class="container">
+      <div class="span4 offset4">
+        <br/>
+        <br/>
+        <p class="lead">Here's a title...</p>
+      
+
+      <div id="main">
+        #{doLayout /}
+      </div>
+
+      <div id="footer" align="center">
+      
+      <p>this is the footer.</p>
+
+      </div>
+    </div>
+
+
+    </div>
+  
+
+
+      </div>
+
+    </div>
+    </div>
+      <div id="main">
+            #{doLayout /}
+        </div>
+    <script src="public/javascripts/jquery-1.6.4.min.js"></script>
+    <script src="public/javascripts/bootstrap.min.js"></script>
+  </body>
+</html>
