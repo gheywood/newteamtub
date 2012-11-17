@@ -3,6 +3,11 @@
         <h1>Add an Event</h1>
     </div>
 #{form @addEvent()}
+ <style>
+  label { padding: 0; marign: 0; display: block; }
+  textarea { width: 100%; border: 1px solid #333; padding: 4px; }
+  .the-fix { padding-right: 10px; }
+ </style>
 
 
 <div class="row">
@@ -42,7 +47,7 @@
 
 <div clas="row">
 
-  <div class="span6" align="center">
+  <div class="the-fix">
     #{field 'inputDescription'}
     <label>Description</label>
       <textarea rows="3" type="description" name="${field.name}" placeholder="Description"></textarea>

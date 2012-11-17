@@ -40,7 +40,8 @@ public class Application extends Controller {
     
     public static void displayEvents()
     {
-    	render(Event.findAll());
+        List<Event> events = Event.findAll();
+    	render(events);
     }
     
     public static void filterEvents(String category, String location)

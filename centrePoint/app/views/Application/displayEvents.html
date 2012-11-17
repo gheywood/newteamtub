@@ -1,32 +1,14 @@
 #{extends 'main.html' /}
-#{set title:'Get Event' /}
+#{set title:'Event Search Results' /}
 
 <div>
-   <h1>Event ${title ?: 'Error'}</h1>
+   <h1>Search Results</h1>
 </div>
 
-<div class="control-group">
-    <label>Event Title: </label>
+#{list items:events, as:'event'}
+<div class="well">
+  <h2 href="/addevent">${event.title}</h2>
+  <p>Category: ${event.category}</p>
+  <p>Venue: ${event.venue}</p>
 </div>
-
-<div class="control-group">
-    <label>Description</label>
-</div>
-
-  <div class="control-group">
-    <label class="control-label" for="inputVenue">Venue</label>
-  </div>
-
-
-  <div class="control-group">
-    <label>Start Time</label>
-  </div>
-
-  <div class="control-group">
-    <label>Duration</label>
-  </div>
-  
-  <div class="control-group">
-    <label class="control-label" for="inputCategory">Category</label>
-  </div>
-</div>
+#{/list}
