@@ -26,6 +26,12 @@ public class Application extends Controller {
 		render();
 	}
 	
+	public static void venueForm()
+	{
+		render();
+	}
+	
+	
 	public static void addVenue(
     	String inputName,
     	String inputLocation)
