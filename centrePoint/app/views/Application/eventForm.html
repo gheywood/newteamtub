@@ -3,41 +3,56 @@
     </div>
 #{form @addEvent()}
 
-<div class="control-group">
+
+<div class="row">
+
+<div class="control-group span3">
     #{field 'inputTitle'}
     <label>Event Title: </label>
       <input type="text" name="${field.name}" placeholder="Title">
     #{/field}
 </div>
 
-<div class="control-group">
-    #{field 'inputDescription'}
-    <label>Description</label>
-      <textarea rows="3" type="description" name="${field.name}" placeholder="Description"></textarea>
-    #{/field}
-</div>
-
-  <div class="control-group">
+<div class="control-group span3">
     <label class="control-label" for="inputVenue">Venue</label>
     <div class="controls">
       <input type="text" id="inputVenue" placeholder="Venue">
     </div>
   </div>
 
+</div>
 
-  <div class="control-group">
+<div class="row">
+
+
+  <div class="span3">
     #{field 'inputStartTime'}
     <label>Start Time</label>
     <input type="text" name="${field.name}" placeholder="StartTime">
     #{/field}
   </div>
 
-  <div class="control-group">
+  <div class="span3">
     <label>Duration</label>
     <input type="text" id="inputDuration" placeholder="Duration">
   </div>
   
-  <div class="control-group">
+</div>
+
+<div clas="row">
+
+  <div class="span6" align="center">
+    #{field 'inputDescription'}
+    <label>Description</label>
+      <textarea rows="3" type="description" name="${field.name}" placeholder="Description"></textarea>
+    #{/field} 
+  </div>
+
+</div>
+
+<div class="row">
+
+<div class="span3">
     #{field 'inputCategory'}
     <label class="control-label" for="inputCategory">Category</label>
     <div class="controls">
@@ -51,9 +66,18 @@
     </div>
     #{/field}
   </div>
-<div class="form-actions">
+
+</div>
+
+<div class="form-actions" align="center">
   <button type="submit" class="btn btn-primary">Save changes</button>
   <button type="button" class="btn">Cancel</button>
 </div>
-  </div>
+
+<div>
+  <br/><br/><br/><br/><br/><br/><br/>
+</div>
+  
+
+</div>
 #{/form}

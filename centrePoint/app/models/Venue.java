@@ -26,11 +26,11 @@ public class Venue extends Model {
     	this.location = location;
     }
     
-    public Venue addEvent(String title, String category, String description, String startTime)
+    public Venue addEvent(String title, String category, String description, String date, String startTime, String duration)
     {
     	if(isPreSet)
         {
-            Event newEvent = new Event(title, category, description, startTime ,"");
+            Event newEvent = new Event(title, category, description, date, startTime, duration);
             this.events.add(newEvent);
             this.save();
         };
