@@ -36,7 +36,7 @@ public class Application extends Controller {
     	String inputName,
     	String inputLocation)
     {
-    	new Event(inputName, inputLocation).save();
+    	new Venue(inputName, inputLocation).save();
     	
 		System.out.println("Venue: " + inputName);	
     	render("@Application.index");
