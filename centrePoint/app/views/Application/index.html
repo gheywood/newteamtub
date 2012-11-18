@@ -4,7 +4,7 @@
 <div class="row" align="center">
 <br/><br/>
   <img  width="200px" src="public/img/logo.png"></a>
-  <br/><br/><br/>
+  <br/><br/>
 
 </div>
 
@@ -21,26 +21,29 @@
 
 
 
-<div class="span3" align="center">
+<div class="span6" align="center">
 
 <i class="icon-globe"></i>
 <i class="icon-headphones"></i>
-
+<i class="icon-calendar"></i>
+<i class="icon-glass"></i>
+<i class="icon-camera"></i><br/><br/>
 </div>
 
 <div class="row">
   
   <div class="btn-group span3" align="center">
     
-<<<<<<< HEAD
+
 
     
     <select>
-=======
+
 #{form @Application.filterEvents()}
 	#{field 'inputCategory'}    
+    
     <select name="${field.name}">
->>>>>>> f1494c3a13e769a7411cb0f15546025cc5079788
+
       <option>Category</option>
       #{list items:cats, as:'c'}
 		<option>${c}</option>	
