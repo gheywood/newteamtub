@@ -41,7 +41,7 @@ public class Application extends Controller {
     	new Venue(inputName, inputLocation).save();
     	
 		System.out.println("Venue: " + inputName);	
-    	redirect("/")
+    	redirect("/");
     }
     
     public static void addEvent(
