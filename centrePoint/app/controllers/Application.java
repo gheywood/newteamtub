@@ -95,7 +95,7 @@ public class Application extends Controller {
         
         //Event event = events.get(0);
         System.out.println(returnedEvents.get(0));
-        displayEvents(returnedEvents);
+        //displayEvents(returnedEvents);
     }
     
     public static void getEvent(String title)
