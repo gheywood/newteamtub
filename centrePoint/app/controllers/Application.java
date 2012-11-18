@@ -74,13 +74,13 @@ public class Application extends Controller {
         render(e);        
     }
     
-    pubic static void getVenue(String location)
+    public static void getVenueByLocation(String location)
     {
         Venue v = Venue.find("byLocation", location).first();
         render(v);
     }
     
-    pubic static void getVenue(String name)
+    public static void getVenueByName(String name)
     {
         Venue v = Venue.find("byName", name).first();
         render(v);
