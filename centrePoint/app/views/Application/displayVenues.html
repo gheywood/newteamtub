@@ -1,0 +1,14 @@
+#{extends 'main.html' /}
+#{set title:'Venue Search Results' /}
+
+<div>
+   <h1>Search Results</h1>
+</div>
+
+#{list items:venues, as:'venue'}
+<div class="well">
+  <h2 href="/addvenue">${venue.title}</h2>
+  <p>Category: ${venue.category}</p>
+  <p>Venue: ${venue.venue}</p>
+</div>
+#{/list}
