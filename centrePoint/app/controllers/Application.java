@@ -65,9 +65,14 @@ public class Application extends Controller {
     	render(venues);
     }
     
-    public static void displayEvents()
+    public static void displayAllEvents()
     {
     	List<Event> events = Event.findAll();
+    	render(events);
+    }
+    
+    public static void displayEvents(List<Event> events)
+    {
     	render(events);
     }
     
@@ -95,7 +100,7 @@ public class Application extends Controller {
         
         //Event event = events.get(0);
         System.out.println(returnedEvents.get(0));
-        //displayEvents(returnedEvents);
+        displayEvents(returnedEvents);
     }
     
     public static void getEvent(String title)

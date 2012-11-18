@@ -1,0 +1,16 @@
+#{extends 'main.html' /}
+#{set title:'Event Search Results' /}
+
+<div>
+   <h1>Search Results</h1>
+</div>
+
+#{list items:events, as:'event'}
+<div class="well left-align">
+  <h2>${event.title}</h2>
+  <p>Category: ${event.category}</p>
+  <p>Venue: ${event.venue}</p>
+  <p>Date: ${event.date}</p>
+  <a href="/getEvent/${event.title}">More Information</a>
+</div>
+#{/list}
