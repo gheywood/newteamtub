@@ -23,9 +23,7 @@
 <div class="control-group span3">
 	#{field 'inputVenue'}
     <label><i class="icon-map-marker"></i> Venue</label>
-    <div class="controls">
-      <input type="text" id="${field.name}" placeholder="Venue">
-    </div>
+      <input type="text" name="${field.name}" placeholder="Venue">
     #{/field}
   </div>
 
@@ -50,7 +48,7 @@
   <div class="span3">
   	#{field 'inputDuration'}
     <label><i class="icon-forward"></i> Duration</label>
-    <input type="text" id="${field.name}" placeholder="Duration">
+    <input type="text" name="${field.name}" placeholder="Duration">
     #{/field}
   </div>
   
