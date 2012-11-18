@@ -15,6 +15,7 @@ public class Application extends Controller {
     	List<String> locs = getLocations();
         render(cats, locs);
     }
+
     
     //public static void addEvent()
     //{
@@ -64,16 +65,17 @@ public class Application extends Controller {
     	render(venues);
     }
     
-    public static void displayEvents()
+    public static void displayEvents(List<Event> events)
     {
-        List<Event> events = Event.findAll();
     	render(events);
     }
     
-    public static void filterEvents(String category, String location)
+    
+    public static void filterEvents(String inputCategory, String inputLocation)
     {
-        List<Event> events = Event.find("select e from Event e, Venue v where e.venue = v and v.location = ? and e.category = ?", location, category).fetch();
-        render("@Application.displayEvents", events);
+        List<Event> events = Event.find("select e from Event e, Venue v where e.venue = v and v.location = ? and e.category = ?", inputLocation, inputCategory).fetch();
+        System.out.println(events.get(0).title);
+        displayEvents(events);
     }
     
     public static void getEvent(String title)
