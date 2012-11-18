@@ -111,4 +111,9 @@ public class Application extends Controller {
         List<String> locations = Venue.find("select location from Venue").fetch();
         return(locations);
     }
+    
+    public static void adminHome()
+    {
+    	render();
+	}
 }
