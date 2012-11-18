@@ -56,7 +56,7 @@ public class Application extends Controller {
     	new Event(inputTitle, inputCategory, inputDescription, inputVenue, inputDate, inputStartTime, inputDuration).save();
     	
 		System.out.println("Event: " + inputTitle + inputCategory + inputVenue + inputDescription + inputDate + inputStartTime + inputDuration);	
-    	render("@Application.index");
+    	redirect("/");
     }
     
     public static void displayVenues()
@@ -82,14 +82,26 @@ public class Application extends Controller {
     public static void getEvent(String title)
     {
         Event e = Event.find("byTitle", title).first();
-        render(e);        
+        showEvent(e);        
+    }
+    
+    public static void showEvent(Event e)
+    {	
+    	System.out.println(e.title);
+    	render(e);
     }
     
     public static void getVenue(String name)
     {
-    	Venue v = getVenueByName(name);
-    	render(v);
-    }		
+    	Venue venue = getVenueByName(name);
+    	showVenue(venue);
+    }	
+    
+    public static void showVenue(Venue venue)
+    {
+    	System.out.println(venue.name);
+    	render(venue);	
+    }
     
     public static Venue getVenueByLocation(String location)
     {

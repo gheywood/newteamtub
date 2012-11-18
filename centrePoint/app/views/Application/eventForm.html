@@ -15,14 +15,14 @@
 
 <div class="control-group span3">
     #{field 'inputTitle'}
-    <label>Event Title</label>
+    <label><i class="icon-globe"></i> Event Title</label>
       <input type="text" name="${field.name}" placeholder="Title">
     #{/field}
 </div>
 
 <div class="control-group span3">
 	#{field 'inputVenue'}
-    <label>Venue</label>
+    <label><i class="icon-map-marker"></i> Venue</label>
     <div class="controls">
       <input type="text" id="${field.name}" placeholder="Venue">
     </div>
@@ -33,45 +33,33 @@
 
 <div class="row">
 
+
+
+
    <div class="span3">
     #{field 'inputDate'}
-    <label>Date</label>
+    <label><i class="icon-calendar"></i> Date</label>
     <input type="text" name="${field.name}" placeholder="Date">
     #{/field}
   </div>
 
   <div class="span3">
     #{field 'inputStartTime'}
-    <label>Start Time</label>
+    <label><i class="icon-calendar"></i> Start Time</label>
     <input type="text" name="${field.name}" placeholder="Start Time">
     #{/field}
   </div>
 
   <div class="span3">
   	#{field 'inputDuration'}
-    <label>Duration</label>
+    <label><i class="icon-forward"></i> Duration</label>
     <input type="text" id="${field.name}" placeholder="Duration">
     #{/field}
   </div>
   
-</div>
-
-<div clas="row">
-
-  <div class="the-fix">
-    #{field 'inputDescription'}
-    <label>Description</label>
-      <textarea rows="3" type="description" name="${field.name}" placeholder="Description"></textarea>
-    #{/field} 
-  </div>
-
-</div>
-
-<div class="row">
-
 <div class="span3">
     #{field 'inputCategory'}
-    <label class="control-label">Category</label>
+    <label class="control-label"><i class="icon-tags"></i> Category</label>
     <div class="controls">
       <select name="${field.name}">
       <option>Competitions</option>
@@ -84,9 +72,29 @@
     #{/field}
   </div>
 
+
 </div>
 
-<div class="form-actions" align="center">
+
+
+<div clas="row">
+
+  <div class="the-fix">
+    #{field 'inputDescription'}
+    <label><i class="icon-pencil"></i> Description</label>
+      <textarea rows="3" type="description" name="${field.name}" placeholder="Description"></textarea>
+    #{/field} 
+  </div>
+
+</div>
+
+<div class="row">
+
+
+
+</div>
+
+<div align="center"><br/><br/>
   <button type="submit" class="btn btn-primary">Save changes</button>
   <button type="button" class="btn">Cancel</button>
 </div>
