@@ -1,28 +1,28 @@
 #{extends 'main.html'/}
 
 #{if e}
-    <div class="event-title">
+    <div>
        <h2>${e.title}</h2>
     </div>
-    <div class="event-description">
+    <div>
         <label>Description: ${e.description}</label>
     </div>
-    <div class="event-category">
+    <div>
         <label>Category: ${e.category}</label>
     </div>
-    <div class="event-date">
+    <div>
         <label>Date: ${e.date}</label>
     </div>
-    <div class="event-startTime">
+    <div
         <label>Time: ${e.startTime}</label>
     </div>
-    <div class="event-duration">
+    <div>
         <label>#{if e.duration} Duration: ${e.duration/60} #{/if}</label>
     </div>
 #{/if}
  
 #{else}
-    <div class="empty">
+    <div>
         There is currently nothing to read here.
     </div>
 #{/else}
