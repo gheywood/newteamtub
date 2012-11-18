@@ -74,16 +74,22 @@ public class Application extends Controller {
         render(e);        
     }
     
-    public static void getVenueByLocation(String location)
+    public static void getVenue(String name)
+    {
+    	Venue v = getVenueByName(name);
+    	render(v);
+    }		
+    
+    public static Venue getVenueByLocation(String location)
     {
         Venue v = Venue.find("byLocation", location).first();
-        render(v);
+        return v;
     }
     
-    public static void getVenueByName(String name)
+    public static Venue getVenueByName(String name)
     {
         Venue v = Venue.find("byName", name).first();
-        render(v);
+        return v;
     }
     
     public static List<String> getCategories()
