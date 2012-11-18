@@ -65,8 +65,9 @@ public class Application extends Controller {
     	render(venues);
     }
     
-    public static void displayEvents(List<Event> events)
+    public static void displayEvents()
     {
+    	List<Event> events = Event.findAll();
     	render(events);
     }
     
@@ -75,7 +76,7 @@ public class Application extends Controller {
     {
         List<Event> events = Event.find("select e from Event e, Venue v where e.venue = v and v.location = ? and e.category = ?", inputLocation, inputCategory).fetch();
         System.out.println(events.get(0).title);
-        displayEvents(events);
+        //displayEvents(events);
     }
     
     public static void getEvent(String title)
