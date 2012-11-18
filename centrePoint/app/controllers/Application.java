@@ -12,7 +12,8 @@ public class Application extends Controller {
     public static void index() {
     	
     	List<String> cats = getCategories();
-        render(cats);
+    	List<String> locs = getLocations();
+        render(cats, locs);
     }
     
     //public static void addEvent()
