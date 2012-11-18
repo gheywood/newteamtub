@@ -41,7 +41,7 @@ public class Application extends Controller {
     	new Venue(inputName, inputLocation).save();
     	
 		System.out.println("Venue: " + inputName);	
-    	render("@Application.index");
+    	redirect("/")
     }
     
     public static void addEvent(
