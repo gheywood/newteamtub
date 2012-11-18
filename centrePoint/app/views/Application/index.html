@@ -34,10 +34,9 @@
     
     <select>
       <option>Category</option>
-      <option value="0">Competitions</option>
-      <option value="0">Learning</option>
-      <option value="0">Hobbies</option>
-      <option value="0">Music</option>
+      #{list items:cats, as:'c'}
+		<option>${c}</option>	
+	  #{/list}
     </select>
 
   </div>
@@ -46,9 +45,9 @@
   
     <select>
       <option>Location</option>
-      <option>Location 1</option>
-      <option>Location 2</option>
-      <option>Location 3</option>
+      #{list items:locs, as:'l'}
+		<option>${l}</option>	
+	  #{/list}
     </select>
 
   </div>
