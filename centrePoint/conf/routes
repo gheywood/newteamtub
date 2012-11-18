@@ -11,6 +11,7 @@ GET		/events									Application.displayEvents
 GET		/addVenue								Application.venueForm
 POST	/addVenue								Application.addVenue
 GET		/getVenue/{name}						Application.getVenue
+GET		/venues									Application.displayVenues
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

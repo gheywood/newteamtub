@@ -56,6 +56,12 @@ public class Application extends Controller {
     	render("@Application.index");
     }
     
+    public static void displayVenues()
+    {
+        List<Venue> venues = Venue.findAll();
+    	render(venues);
+    }
+    
     public static void displayEvents()
     {
         List<Event> events = Event.findAll();
