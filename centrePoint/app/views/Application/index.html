@@ -28,16 +28,20 @@
 
 </div>
 
+#{form @Application.filterEvents()}
+
 <div class="row">
   
   <div class="btn-group span3" align="center">
     
     
-    <select>
-#{form @Application.filterEvents()}
+	
+	
+	
 	#{field 'inputCategory'}    
     <select name="${field.name}">
       <option>Category</option>
+      
       #{list items:cats, as:'c'}
 		<option>${c}</option>	
 	  #{/list}
@@ -60,7 +64,7 @@
   </div>
 
 </div>
-<br><Br>
+<br><br>
   <div class="span6" align="center">
 
     <button class="btn btn-large btn-success">Search Events</button>
