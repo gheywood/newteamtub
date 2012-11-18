@@ -2,12 +2,13 @@
 #{set title:'Venue Search Results' /}
 
 <div>
-   <h1>Search Results</h1>
+   <h1>Venues</h1>
 </div>
 
 #{list items:venues, as:'venue'}
 <div class="well">
   <h2 href="/addvenue">${venue.name}</h2>
   <p>Location: ${venue.location}</p>
+  <a href="/getVenue/${venue.name}">View Events At This Location</a>
 </div>
 #{/list}
