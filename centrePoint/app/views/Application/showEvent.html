@@ -1,21 +1,52 @@
 #{extends 'main.html'/}
 
 #{if e}
-    <div>
-       <h2>${e.title}</h2>
-    </div>
-    <div>
-        <label>Description: ${e.description}</label>
-    </div>
-    <div>
-        <label>Category: ${e.category}</label>
-    </div>
-    <div>
-        <label>Date: ${e.date}</label>
-    </div>
-    <div
-        <label>Time: ${e.startTime}</label>
-    </div>
+
+<div class="row">
+
+<div>
+    <h1>View Event</h1>
+    <br/><br/>
+</div>
+
+</div>
+
+
+
+<div class="row">
+   
+    <i class="icon-list"></i><b> Description</b>
+    <label>Description Label</label>
+    <br/>
+
+</div>
+
+
+<div class="row">
+        <i class="icon-tag"></i><b> Category</b>
+        <label>Category Label</label>
+        <br/>
+
+</div>
+
+<div class="row">
+
+        <i class="icon-calendar"></i><b> Calendar</b>
+        <label>Date Label</label>
+        <br/>
+
+</div>    
+
+<div class="row">
+
+        <i class="icon-map-marker"></i><b> Location</b>
+        <label>Location Label</label>
+        <br/>
+
+</div>  
+
+
+
     <div>
         <label>Duration: ${e.duration}</label>
     </div>
