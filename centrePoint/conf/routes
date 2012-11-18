@@ -15,6 +15,7 @@ GET		/venues									Application.displayVenues
 GET		/adminHome								Application.adminHome
 GET		/showEvent								Application.showEvent
 GET		/showVenue								Application.showVenue
+GET		/filterEvents							Application.filterEvents
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
