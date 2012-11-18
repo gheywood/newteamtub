@@ -52,7 +52,7 @@ public class Application extends Controller {
     {
     	new Event(inputTitle, inputCategory, inputDescription, inputDate, inputStartTime, inputDuration).save();
     	
-		System.out.println("Event: " + inputTitle);	
+		System.out.println("Event: " + inputTitle + inputDescription + inputDate + inputStartTime + inputDuration);	
     	render("@Application.index");
     }
     
