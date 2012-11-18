@@ -30,21 +30,34 @@
 <i class="icon-camera"></i><br/><br/>
 </div>
 
+#{form @Application.filterEvents()}
+
 <div class="row">
   
   <div class="btn-group span3" align="center">
     
+<<<<<<< HEAD
 
 
     
     <select>
 
 #{form @Application.filterEvents()}
+=======
+    
+	
+	
+	
+>>>>>>> 59ed4979443018c4ef5ae8cb9206a3598c2607a1
 	#{field 'inputCategory'}    
     
     <select name="${field.name}">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 59ed4979443018c4ef5ae8cb9206a3598c2607a1
       <option>Category</option>
+      
       #{list items:cats, as:'c'}
 		<option>${c}</option>	
 	  #{/list}
@@ -67,7 +80,7 @@
   </div>
 
 </div>
-<br><Br>
+<br><br>
   <div class="span6" align="center">
 
     <button class="btn btn-large btn-success">Search Events</button>

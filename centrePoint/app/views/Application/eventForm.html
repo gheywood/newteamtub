@@ -15,16 +15,18 @@
 
 <div class="control-group span3">
     #{field 'inputTitle'}
-    <label>Event Title: </label>
+    <label>Event Title</label>
       <input type="text" name="${field.name}" placeholder="Title">
     #{/field}
 </div>
 
 <div class="control-group span3">
-    <label class="control-label" for="inputVenue">Venue</label>
+	#{field 'inputVenue'}
+    <label>Venue</label>
     <div class="controls">
-      <input type="text" id="inputVenue" placeholder="Venue">
+      <input type="text" id="${field.name}" placeholder="Venue">
     </div>
+    #{/field}
   </div>
 
 </div>
