@@ -13,6 +13,8 @@ POST	/addVenue								Application.addVenue
 GET		/getVenue/{name}						Application.getVenue
 GET		/venues									Application.displayVenues
 GET		/adminHome								Application.adminHome
+GET		/showEvent								Application.showEvent
+GET		/showVenue								Application.showVenue
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
