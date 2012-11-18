@@ -83,7 +83,7 @@ public class Application extends Controller {
             for(Venue ve : venues)
             {
                 System.out.println(ve.name);
-                System.out.println(ev.);
+                System.out.println(ev.venue);
                 if(ve.name == ev.venue)
                 {
                     returnedEvents.add(ev);
