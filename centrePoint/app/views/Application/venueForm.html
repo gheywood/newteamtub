@@ -5,22 +5,26 @@
 #{form @addVenue()}
 
 <div class="row">
-
+<br/><br/>
 <div class="control-group span3">
     #{field 'inputName'}
-    <label>Venue Name: </label>
+    <label><i class="icon-home"></i> Venue Name: </label>
       <input type="text" name="${field.name}" placeholder="Name">
     #{/field}
 </div>
 
 <div class="control-group span3">
     #{field 'inputLocation'}
-    <label>Venue Location: </label>
+    <label><i class="icon-map-marker"></i> Venue Location: </label>
       <input type="text" name="${field.name}" placeholder="Location">
     #{/field}
+
+    <br/><br/><br/>
 </div>
 
+
 <div align="center">
+
   <button type="submit" class="btn btn-primary">Save changes</button>
   <button type="button" class="btn">Cancel</button>
 </div>
