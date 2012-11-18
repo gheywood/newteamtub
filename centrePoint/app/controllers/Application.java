@@ -74,6 +74,18 @@ public class Application extends Controller {
         render(e);        
     }
     
+    pubic static void getVenue(String location)
+    {
+        Venue v = Venue.find("byLocation", location).first();
+        render(v);
+    }
+    
+    pubic static void getVenue(String name)
+    {
+        Venue v = Venue.find("byName", name).first();
+        render(v);
+    }
+    
     public static List<String> getCategories()
     {
         List<String> categs = Event.find("select category from Event").fetch();
