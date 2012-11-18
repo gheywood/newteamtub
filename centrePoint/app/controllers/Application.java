@@ -98,7 +98,7 @@ public class Application extends Controller {
         	venues = Venue.findAll();
         }
         
-        System.out.println(venues.toString());
+        //System.out.println(venues.toString());
         
         //List<Event> events = Event.find("select e from Event e where e.category = ?", inputCategory).fetch();
         //List<Venue> venues = Venue.find("select v from Venue v where v.location = ?", inputLocation).fetch();
@@ -170,13 +170,23 @@ public class Application extends Controller {
     public static List<String> getCategories()
     {
         List<String> categs = Event.find("select category from Event").fetch();
-        return(categs);
+        
+        Set set = new HashSet(categs);
+        
+        ArrayList newCategs = new ArrayList(set);
+        
+        return(newCategs);
     }
     
     public static List<String> getLocations()
     {
         List<String> locations = Venue.find("select location from Venue").fetch();
-        return(locations);
+        
+        Set set = new HastSet(locations);
+        
+        ArrayList newLocations = new ArrayList(set);
+        
+        return(newLocations);
     }
     
     public static void adminHome()
