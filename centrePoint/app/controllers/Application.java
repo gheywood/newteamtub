@@ -74,6 +74,7 @@ public class Application extends Controller {
     public static void filterEvents(String inputCategory, String inputLocation)
     {
         System.out.println(inputCategory + inputLocation);
+        
         List<Event> events = Event.find("select e from Event e where e.category = ?", inputCategory).fetch();
         List<Venue> venues = Venue.find("select v from Venue v where v.location = ?", inputLocation).fetch();
         
