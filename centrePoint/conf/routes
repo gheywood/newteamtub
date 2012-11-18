@@ -8,6 +8,8 @@ GET		/addEvent								Application.eventForm
 POST	/addEvent								Application.addEvent
 GET		/getEvent/{title}						Application.getEvent
 GET		/events									Application.displayEvents
+GET		/addVenue								Application.venueForm
+POST	/addVenue								Application.addVenue
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

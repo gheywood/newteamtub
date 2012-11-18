@@ -25,6 +25,22 @@ public class Application extends Controller {
 	{
 		render();
 	}
+	
+	public static void venueForm()
+	{
+		render();
+	}
+	
+	
+	public static void addVenue(
+    	String inputName,
+    	String inputLocation)
+    {
+    	new Venue(inputName, inputLocation).save();
+    	
+		System.out.println("Venue: " + inputName);	
+    	render("@Application.index");
+    }
     
     public static void addEvent(
     	String inputTitle,
@@ -36,13 +52,14 @@ public class Application extends Controller {
     {
     	new Event(inputTitle, inputCategory, inputDescription, inputDate, inputStartTime, inputDuration).save();
     	
-		System.out.println("Called " + inputTitle);	
+		System.out.println("Event: " + inputTitle);	
     	render("@Application.index");
     }
     
     public static void displayEvents()
     {
-    	render(Event.findAll());
+        List<Event> events = Event.findAll();
+    	render(events);
     }
     
     public static void filterEvents(String category, String location)
