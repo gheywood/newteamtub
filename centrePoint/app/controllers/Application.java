@@ -46,13 +46,14 @@ public class Application extends Controller {
     	String inputTitle,
     	String inputCategory,
     	String inputDescription,
+    	String inputVenue,
         String inputDate,
     	String inputStartTime,
         String inputDuration)
     {
-    	new Event(inputTitle, inputCategory, inputDescription, inputDate, inputStartTime, inputDuration).save();
+    	new Event(inputTitle, inputCategory, inputDescription, inputVenue, inputDate, inputStartTime, inputDuration).save();
     	
-		System.out.println("Event: " + inputTitle + inputDescription + inputDate + inputStartTime + inputDuration);	
+		System.out.println("Event: " + inputTitle + inputCategory + inputVenue + inputDescription + inputDate + inputStartTime + inputDuration);	
     	render("@Application.index");
     }
     

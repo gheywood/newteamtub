@@ -26,6 +26,7 @@ public class Event extends Model { //Model class generates auto ID
         this.venue = venue;
         this.date = date;
 		this.startTime = startTime;
+		this.duration = duration;
     }
     
     
