@@ -34,11 +34,10 @@
 <div class="row">
    
     <i class="icon-glass"></i><b> Events at this Venue</b>
-    
-
-
-    <label>Event Label</label>
+   #{list items:realtedEvents, as:'event'}
+    <a href="/getEvent/${event.title}"><label>${event.title}</label></a>
     <br/>
+   #{/list}
 
 </div>
 
