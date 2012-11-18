@@ -47,11 +47,11 @@ public class Application extends Controller {
     public static void addEvent(
     	String inputTitle,
     	String inputCategory,
-    	String inputDescription,
     	String inputVenue,
-        String inputDate,
+    	String inputDate,
     	String inputStartTime,
-        String inputDuration)
+        String inputDuration,
+    	String inputDescription)
     {
     	new Event(inputTitle, inputCategory, inputDescription, inputVenue, inputDate, inputStartTime, inputDuration).save();
     	
@@ -100,6 +100,7 @@ public class Application extends Controller {
     public static void getEvent(String title)
     {
         Event e = Event.find("byTitle", title).first();
+        System.out.println(e.duration);
         showEvent(e);        
     }
     
