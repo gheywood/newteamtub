@@ -75,24 +75,54 @@ public class Application extends Controller {
     
     public static void filterEvents(String inputCategory, String inputLocation)
     {
-        System.out.println(inputCategory + inputLocation);
+        System.out.println(inputCategory);
         
-        List<Event> events = Event.find("select e from Event e where e.category = ?", inputCategory).fetch();
-        List<Venue> venues = Venue.find("select v from Venue v where v.location = ?", inputLocation).fetch();
+        List<Event> events;
+        List<Venue> venues;
+        
+        if (!inputCategory.equals("Category"))
+        {
+        	events = Event.find("select e from Event e where e.category = ?", inputCategory).fetch(); 	
+        }
+        else
+        {
+        	events = Event.findAll();
+        }
+        
+        if(!inputLocation.equals("Location"))
+        {
+        	venues = Venue.find("select v from Venue v where v.location = ?", inputLocation).fetch();
+        }
+        else
+        {
+        	venues = Venue.findAll();
+        }
+        
+        System.out.println(venues.toString());
+        
+        //List<Event> events = Event.find("select e from Event e where e.category = ?", inputCategory).fetch();
+        //List<Venue> venues = Venue.find("select v from Venue v where v.location = ?", inputLocation).fetch();
         
         List<Event> returnedEvents = new ArrayList<Event>();
-        
-        for(Event ev : events) {
-            for(Venue ve : venues)
-            {
-                System.out.println(ve.name);
-                System.out.println(ev.venue);
-                if(ve.name == ev.venue)
-                {
-                    returnedEvents.add(ev);
-                    break;
-                }
-            }
+        if(inputLocation.equals("Location"))
+        {
+        	returnedEvents = events;
+        }
+        else
+        {
+        	
+        	for(Event ev : events) {
+            	for(Venue ve : venues)
+            	{
+                	System.out.println(ve.name);
+                	System.out.println(ev.venue);
+                	if(ve.name == ev.venue)
+                	{
+                    	returnedEvents.add(ev);
+                    	break;
+                	}
+            	}
+        	}
         }
         
         //Event event = events.get(0);
