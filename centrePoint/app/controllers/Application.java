@@ -151,8 +151,8 @@ public class Application extends Controller {
     
     public static void showVenue(Venue venue)
     {
-    	System.out.println(venue.name);
-    	render(venue);	
+    	List<Event> relatedEvents = Event.find("select e from Event e where e.venue = ?", venue.name).fetch();
+    	render(venue, relatedEvents);	
     }
     
     public static Venue getVenueByLocation(String location)
@@ -182,7 +182,7 @@ public class Application extends Controller {
     {
         List<String> locations = Venue.find("select location from Venue").fetch();
         
-        Set set = new HastSet(locations);
+        Set set = new HashSet(locations);
         
         ArrayList newLocations = new ArrayList(set);
         
