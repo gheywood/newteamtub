@@ -35,8 +35,7 @@
    
     <i class="icon-glass"></i><b> Events at this Venue</b>
    #{list items:relatedEvents, as:'event'}
-    <a href="/getEvent/${event.title}"><label>${event.title}</label></a>
-    <br/>
+    <a href="/getEvent/${event.title}"><label>${event.date} - ${event.title}</label></a>
    #{/list}
 
 </div>
