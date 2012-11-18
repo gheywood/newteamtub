@@ -7,7 +7,7 @@ GET     /                                       Application.index
 GET		/addEvent								Application.eventForm
 POST	/addEvent								Application.addEvent
 GET		/getEvent/{title}						Application.getEvent
-GET		/events									Application.displayEvents
+GET		/allEvents								Application.displayAllEvents
 GET		/addVenue								Application.venueForm
 POST	/addVenue								Application.addVenue
 GET		/getVenue/{name}						Application.getVenue

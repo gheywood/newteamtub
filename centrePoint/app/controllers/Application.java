@@ -65,6 +65,12 @@ public class Application extends Controller {
     	render(venues);
     }
     
+    public static void displayAllEvents()
+    {
+    	List<Event> events = Event.findAll();
+    	render(events);
+    }
+    
     public static void displayEvents(List<Event> events)
     {
     	render(events);
@@ -73,9 +79,28 @@ public class Application extends Controller {
     
     public static void filterEvents(String inputCategory, String inputLocation)
     {
-        List<Event> events = Event.find("select e from Event e, Venue v where e.venue = v and v.location = ? and e.category = ?", inputLocation, inputCategory).fetch();
-        System.out.println(events.get(0).title);
-        displayEvents(events);
+        System.out.println(inputCategory + inputLocation);
+        List<Event> events = Event.find("select e from Event e where e.category = ?", inputCategory).fetch();
+        List<Venue> venues = Venue.find("select v from Venue v where v.location = ?", inputLocation).fetch();
+        
+        List<Event> returnedEvents = new ArrayList<Event>();
+        
+        for(Event ev : events) {
+            for(Venue ve : venues)
+            {
+                System.out.println(ve.name);
+                System.out.println(ev.venue);
+                if(ve.name == ev.venue)
+                {
+                    returnedEvents.add(ev);
+                    break;
+                }
+            }
+        }
+        
+        //Event event = events.get(0);
+        System.out.println(returnedEvents.get(0));
+        displayEvents(returnedEvents);
     }
     
     public static void getEvent(String title)
